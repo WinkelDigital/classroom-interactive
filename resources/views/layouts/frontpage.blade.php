@@ -11,7 +11,7 @@
         @include('layouts.nav.frontpage')
         @yield('content')
         <footer class="footer">
-            <div class="container py-5">
+            <div class="container">
                 <div class="row">
                 </div>
             </div>

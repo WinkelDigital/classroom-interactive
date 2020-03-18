@@ -14,12 +14,6 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/login/teacher', function () {
-    return view('auth.login_teacher');
-});
-Route::get('/login/student', function () {
-    return view('auth.login_student');
-});
 
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {

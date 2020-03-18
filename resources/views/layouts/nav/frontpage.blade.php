@@ -4,18 +4,15 @@
             Class Interactive
         </a>
         <button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#navbarContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div id="navbarContent" class="collapse navbar-collapse">     
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="/register">Get Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login/teacher">Teacher Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login/student">Student Login</a>
+                    <a class="nav-link" href="/login">Login</a>
                 </li>
             </ul> 
         </div>
