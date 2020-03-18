@@ -59,6 +59,9 @@ class ActivitiesController extends Controller
 //        event( new ClassroomActivityPusherEvent('coba'));
         $requestData = $request->all();
         if($request->input('type')=='file'){
+            request()->validate([
+                'file' => 'mimes:jpeg,png,jpg,docx,doc,pdf|max:5000',
+            ]);
             $file = new File();
             $file->name = $request->input('file_name');
             $file->description = $request->input('file_description');
@@ -167,7 +170,9 @@ class ActivitiesController extends Controller
     public function destroy($id)
     {
         Activities::destroy($id);
-
+        if(request()->query('ref')){
+            return redirect(request()->query('ref'))->with('flash_message', 'Activities deleted!');
+        }
         return redirect('activities')->with('flash_message', 'Activities deleted!');
     }
     

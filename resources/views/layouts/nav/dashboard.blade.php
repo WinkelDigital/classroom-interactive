@@ -1,5 +1,5 @@
-<div class="collapse navbar-collapse">     
-    <ul class="navbar-nav mr-auto">
+<div id="navbarContent" class="collapse navbar-collapse">     
+    <ul class="navbar-nav mr-md-auto">
         <li class="nav-item">
             <a class="nav-link" href="/dashboard">Launch</a>
         </li>
@@ -23,7 +23,7 @@
         </li>
         @endif
     </ul> 
-    <ul class="navbar-nav pull-right">
+    <ul class="navbar-nav">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ Auth::user()->name}}

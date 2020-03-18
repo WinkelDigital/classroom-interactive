@@ -30,19 +30,25 @@
             {{ method_field('PATCH') }}
             {{ csrf_field() }}
             @if(Auth::user()->user_level > 2 || ($activity->type != 'quiz'))
-            <a href="/activities/{{ $activity->id }}" class="btn btn-secondary text-white float-right">
+            <a href="/activities/{{ $activity->id }}" class="btn btn-sm btn-secondary text-white float-right">
                 {!! $action !!}
             </a>
             @endif
             @if(Auth::user()->user_level == 2)
             <input type="hidden" name="status" value="finished">    
-            <button type="submit"  class="btn btn-success float-right"><i class="fa fa-check"></i> Set to done</button>
+            <button type="submit"  class="btn btn-sm btn-success float-right"><i class="fa fa-check"></i> Set to done</button>
             @if($activity->type == 'quiz')
-            <a href="/activities/{{ $activity->id }}/report" class="btn btn-dark float-right"><i class="fa fa-file-o"></i> Report</a>
+            <a href="/activities/{{ $activity->id }}/report" class="btn btn-sm btn-dark float-right"><i class="fa fa-file-o"></i> Report</a>
             @endif
             @endif
         </form>
-            
+        @if(Auth::user()->user_level == 2)
+        <form method="POST" action="{{ url('/activities' . '/' . $activity->id . '?ref=' . Request::url()) }}" accept-charset="UTF-8" style="display:inline">
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-sm btn-danger" title="Delete activity" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                            </form>
+        @endif
     </div>
 </div>
 @empty

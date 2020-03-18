@@ -6,12 +6,23 @@
     <h5 id="classroom-name">{{$classroom->name}}</h5>
         
     @if(Auth::user()->user_level < 3)
+    @if (count($errors) > 0)
+
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+
+    @endif
     @include('classrooms.activity.form')
-    <div class="row">
-        <div class="offset-sm-3 col-sm-6 ">
+    
+    <div class="">
             <h6 class="activity-quick text-with-line">Activities</h6>
         </div>
-    </div>
     @endif
     <div class="row">
         <div class="col-sm-8 active-activities">

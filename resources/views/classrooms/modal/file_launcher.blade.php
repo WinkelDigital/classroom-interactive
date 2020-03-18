@@ -16,6 +16,7 @@
                         <div>
                             <label for="">File</label>
                             <input type="file" name="file" id="">
+                            {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
                         </div>    
                         <div>
                             <label for="">Label</label>

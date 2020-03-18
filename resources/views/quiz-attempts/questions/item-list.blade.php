@@ -50,9 +50,10 @@
                                                    btn-answer-quiz
                                                    answer-option-item 
                                                    answer-option-id-{{$option->id}} 
+                                                   text-left
                                                    btn-outline-secondary
                                                    {{$question->answer == $option->id?'active':''}}">
-                                                <input type="radio" {{ ($question->answer == $option->id)  ? 'checked' : '' }} name="answer" value="{{$option->id}}" autocomplete="off" checked> {{$option->answer_option}}
+                                                <input type="radio" {{ ($question->answer == $option->id)  ? 'checked' : '' }} name="answer" value="{{$option->id}}" autocomplete="off"> {{$option->answer_option}}
                                             </label>                  
                                             @endforeach
                                         </div>

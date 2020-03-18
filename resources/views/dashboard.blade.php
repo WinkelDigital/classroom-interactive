@@ -3,12 +3,12 @@
 @section('content')
 @if(Auth::user()->user_level > 2)
 <div class="main-page">
-    <div class="col-sm-8 offset-2">
+    <div class="mx-auto" style="max-width: 500px">
         <h2 class="text-center">Join class</h2>
         <div class="form-enter-classroom">
             <form method="POST" action="/classrooms/find">
                 {{ csrf_field() }}
-                <div class="col-sm-8 offset-2">
+                <div class=" text-center">
                     <label for="classroom-code">Enter classroom code</label>
                     <input class="form-control" name="code" id="classroom-code" type="text">
                 </div>

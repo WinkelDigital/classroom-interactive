@@ -4,7 +4,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="UTF-8">
         <title>Class Interactive</title>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     </head>
     <body>
@@ -25,6 +25,12 @@
         </nav>
         <div class="main">
             <div class="container">
+                @if ($message = Session::get('flash_message'))
+                <div class="alert alert-info alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button> 
+                    <strong>{{ $message }}</strong>
+                </div>
+                @endif
                 @yield('content')
             </div>
         </div>

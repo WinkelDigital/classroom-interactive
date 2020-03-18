@@ -2,6 +2,9 @@
     Created on : 25 Jun 18, 22:34:39
     Author     : hprasetyou
 */
+html {
+    scroll-behavior: smooth;
+}
 
 .course-item {
     border-bottom: 1px solid #ccc;
@@ -20,9 +23,18 @@
     
     border: 3px solid;
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    padding: 30px 20px 20px 20px;
+    padding: 20px;
+    .fa{
+        font-size: 3rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+        padding: 30px 20px 20px 20px;
+        height: 120px;
+        width: 120px;
+        .fa{
+            font-size: 4rem;
+        }
+    }
 }
 
 .activity-item-icon-smaller{
@@ -143,8 +155,12 @@ a.activity-item:hover{
     margin-bottom: 10px;
 }
 .btn.btn-question-nav {
-    width: 40px;
+    width: calc((100% - 40px )/5);
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+        width: calc((100% - 30px )/5);
+    }
     margin: 1%;
+    padding: 5px 0;
 }
 
 .activity-list-past{
@@ -182,4 +198,15 @@ a.activity-item:hover{
 }
 .footer{
     background-color: $gray-100;
+}
+
+@media (max-width: (map-get($grid-breakpoints, 'md') - 1px) ) {
+    .nav-link{
+        .dropdown-menu{
+            background-color: transparent;
+        }
+    }
+}
+iframe {
+    max-width: 100%;
 }

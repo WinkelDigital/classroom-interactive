@@ -3,7 +3,7 @@
     <div class="card-body">
         
         @for($i=0;$i< ceil($questions->total()/5);$i++)
-        <div class="row row-{{$i}}">
+        <div class="row mx-0 row-{{$i}}">
             @for($j=(5*$i);$j<((5*$i)+5);$j++)
             @if($j < $questions->total())
             <a href="/quiz_attempt/{{ $attempt->id }}?page={{$i+1}}#question-{{$j+1}}" class="btn question-nav-{{$j+1}} {{in_array($j+1,$answered)?'btn-secondary':'btn-outline-primary'}} btn-question-nav ">{{$j+1}}</a>
