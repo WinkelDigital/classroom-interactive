@@ -1,0 +1,185 @@
+/* 
+    Created on : 25 Jun 18, 22:34:39
+    Author     : hprasetyou
+*/
+
+.course-item {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+.main{
+    margin-top: 30px;
+}
+.activity-item {
+    
+    display: block;
+    text-align: center;
+    
+}
+.activity-item-icon {
+    
+    border: 3px solid;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    padding: 30px 20px 20px 20px;
+}
+
+.activity-item-icon-smaller{
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    padding: 20px 15px 15px 15px;
+}
+
+.activity-item-text {
+    
+    margin-top: 10px;
+    display: block;
+    font-size: 1.5em;
+    color:  $gray-600;
+}
+.text-center{
+    text-align: center;
+}
+.text-with-line {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.text-with-line:before, .text-with-line:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 48%;
+    height: 1px;
+    content: '\a0';
+    background-color: $gray-300;
+}
+.text-with-line:before {
+    margin-left: -50%;
+    text-align: right;
+}
+.text-with-line::after {
+    margin-right: -12%;
+    right: 0;
+}
+.icon-text{
+    font-size: 2.5em;
+}
+
+.quizlaunch-name{
+    margin-bottom: 0.3rem;
+}
+.quizlaunch-desc{
+    font-size: 0.8em;
+    color: $gray-600;
+}
+
+a.activity-item:hover{
+    text-decoration: none;
+}
+#classroom-code, #classroom-name{
+    text-align: center;
+}
+#classroom-code{
+    color: $gray-600;
+}
+#classroom-name{
+    color: $gray-500;
+    margin-bottom: 20px;
+}
+
+.past-activities{
+    border-left: 1px solid $gray-300;
+}
+.title-activities {
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $gray-300;
+    padding-bottom: 10px;
+    
+}
+.empty-list{
+    text-align: center;
+    font-size: 2em;
+    color: #ccc;
+    padding: 50px;
+}
+
+.question-list-item-answer-option tr td {
+    padding: 5px;
+}
+.quiz-overview-detail{
+   text-align: center; 
+}
+
+.quiz-overview{
+    padding:20px;
+}
+
+.card.question-list-item {
+    margin-top: 20px;
+}
+.btn{
+    margin-left:5px;
+}
+.input-group .btn {
+    margin-left:0px;
+}
+.footer{
+    padding:30px;
+}
+.answer-option-item{
+    width:100%;
+    margin-top: 10px;
+}
+.quiz-list-item, .side-widget, .activity-list-item{
+    margin-bottom: 10px;
+}
+.btn.btn-question-nav {
+    width: 40px;
+    margin: 1%;
+}
+
+.activity-list-past{
+    padding-left: 0;
+    list-style: none;
+    border: none;
+}
+.activity-list-past > a.activity-list-item{
+    display: block;
+    padding:10px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.answer, .answer-key{
+    font-weight: 600;
+}
+.wrong-answer .answer{
+    text-decoration: line-through;
+}
+
+.nav-frontpage {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray-300;
+    border-top: 5px solid $primary;
+}
+
+.nav-frontpage .navbar-nav{
+    font-size: 1.2em;
+}
+.nav-tabs .nav-tab-link.active, 
+.nav-tabs .nav-item.show .nav-tab-link, 
+.nav-tabs .nav-tab-link:hover{
+    border-color: transparent;
+}
+.footer{
+    background-color: $gray-100;
+}
