@@ -20,7 +20,7 @@
     "jquery": "^3.4.1",
     "jquery-countdown": "^2.2.0",
     "laravel-mix": "^2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "popper.js": "^1.12",
     "summernote": "^0.8.10",
     "vue": "^2.5.7"
